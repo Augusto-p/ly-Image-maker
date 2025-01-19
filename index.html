@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="fonts/Roboto.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>LyArt</title>
+</head>
+
+<body>
+    <canvas id="Canvas_Preview" style="display: none;"></canvas>
+    <canvas id="Canvas_Download" style="display: none;"></canvas>
+
+    <header>
+        <h1>LyArt</h1>
+        <h2>A lightweight tool designed to convert bitmap images to a special format compatible with 
+            <a href="https://github.com/">Ly width Image Support</a>, the minimalist TUI-based display manager 
+            enhanced with the capability to display images under Termbox limitations</h2>
+    </header>
+
+    <section class="Images">
+        <div id="Upload_Div" class="Div_Images unLoad">
+            <h2>Upload File:</h2>
+            <input type="file" id="upload" accept="image/*">
+            <img src="" id="Upload_Preview">
+            <div id="Upload_make">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                        d="M18 20H4V6h9V4H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-9h-2v9zm-7.79-3.17l-1.96-2.36L5.5 18h11l-3.54-4.71zM20 4V1h-2v3h-3c.01.01 0 2 0 2h3v2.99c.01.01 2 0 2 0V6h3V4h-3z" />
+                </svg>
+                <span>Upload Image to combert in LyArt</span>
+            </div>
+
+        </div>
+
+        <button id="View_Preview">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path
+                    d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-480H200v480Zm280-80q-82 0-146.5-44.5T240-440q29-71 93.5-115.5T480-600q82 0 146.5 44.5T720-440q-29 71-93.5 115.5T480-280Zm0-60q56 0 102-26.5t72-73.5q-26-47-72-73.5T480-540q-56 0-102 26.5T306-440q26 47 72 73.5T480-340Zm0-100Zm0 60q25 0 42.5-17.5T540-440q0-25-17.5-42.5T480-500q-25 0-42.5 17.5T420-440q0 25 17.5 42.5T480-380Z" />
+            </svg>
+        </button>
+        <div id="Preview_Div" class="Div_Images">
+            <h2>Preview:</h2>
+            <img id="Preview"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+        </div>
+    </section>
+    <section class="Download_Section">
+
+
+        <input type="number" id="width" placeholder="Width:">
+        <input type="number" id="height" placeholder="Height:">
+        <button id="Download"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path
+                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+            </svg>Download</button>
+    </section>
+
+    <script src="js/encoderUtils.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

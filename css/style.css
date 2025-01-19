@@ -1,0 +1,224 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #0d1117;  
+    font-family: "Roboto", serif; 
+}
+
+h1{
+    color: #fff;
+    width: 100vw;
+    margin: 0;
+    text-align: center;
+    height: 10vh;
+    font-size: 3.5em;
+    text-decoration: underline;
+    font-weight: 900;
+    
+}
+
+.Images{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+.Div_Images{
+    width: 50vw;
+    height: 50vh;
+    padding: 0 5vw 5vh 5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#Preview_Div{
+    grid-row: 1;
+    grid-column: 2;
+    
+}
+#Upload_Div{
+    grid-row: 1;
+    grid-column: 1;
+    
+}
+
+.Div_Images h2{
+    height: 5vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+.Div_Images img{
+    width: 40vw;
+    height: 40vh;
+    object-fit: contain;
+    border: 1vh solid transparent;
+    border-radius: 1vh;
+    box-sizing: border-box;
+}
+.Div_Images img:hover, #upload:hover ~ img{
+    border-color: greenyellow;
+}
+
+#upload{
+    position: absolute;
+    top:5vh;
+    bottom: 5vh;
+    width: 40vw;
+    opacity: 0;
+
+}
+
+
+#View_Preview{
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 100%;
+    top: calc(25vh - 4vw);
+    left: 46vw;
+    box-sizing: border-box;
+    padding: 1vw;
+    fill: #fff;
+    transition: transform 2s;
+}
+
+#View_Preview:hover{
+    fill: #aaa;
+    transform: rotatez(-45deg);
+}
+
+.Download_Section{
+    width: 100vw;
+    height: 11vh;
+    
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(50, 1fr);
+    grid-row-gap: 1vh;
+    box-sizing: border-box;
+    padding: 0 25vw;
+
+}
+
+.Download_Section input{
+    background-color: #aaaaaa22;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-size: 1em;
+    color: #fff;
+    box-sizing: border-box;
+    padding-left: 1vh;
+}
+
+.Download_Section input:hover{
+    border-color: #80c519;
+}
+
+.Download_Section input:focus{
+    border-color: greenyellow;
+}
+
+.Download_Section #width{
+    grid-row: 1;
+    grid-column: 5/21;
+    border-top-left-radius: 1vh;
+}
+
+.Download_Section #height{
+    grid-row: 1;
+    grid-column: 31/47;
+    border-top-right-radius: 1vh;
+}
+
+.Download_Section #Download{
+    grid-row: 2;
+    grid-column: 18/34;
+    border: none;
+    border-bottom-right-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    background-color: greenyellow;
+    color: #fff;
+    font-size: 1.2em;
+    fill: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Download_Section #Download svg{
+    height: 5vh;
+    margin-right: 1vw;
+}
+.Download_Section #Download:hover{
+    color: #aaa;
+    fill: #aaa;
+}
+
+.unLoad #Upload_Preview{
+    display: none;
+}
+
+#Upload_make{
+    display: none;
+}
+
+.unLoad #Upload_make{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vh;
+    fill: #aaa;
+    color: #aaa;
+    text-align: center;
+    font-size: x-large;
+    justify-content: space-evenly;
+    border: 1vh solid transparent;
+    border-radius: 1vh;
+    box-sizing: border-box;
+}
+
+.unLoad #upload:hover ~ #Upload_make{
+    border-color: greenyellow;
+}
+.unLoad #Upload_make svg{
+    height: 25vh;
+
+}
+#upload:hover ~ #Upload_make {
+    color: #fff ;
+    fill: #fff ;
+}
+
+header h2{
+    padding: 0 15vw;
+    color: #fff;
+    margin: 0 0 2vh 0;
+    font-size: medium;
+    font-weight: 400;
+}
+
+header h2 a{
+    text-decoration: none;
+    font-weight: 700;
+    color: greenyellow;
+}
+header h2 a:hover{
+    font-size: large;
+    color: #80c519;
+    text-decoration: underline;
+}
